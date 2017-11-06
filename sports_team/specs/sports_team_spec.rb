@@ -19,17 +19,17 @@ class SportsTeamTest < MiniTest::Test
 		assert_equal(true, @team.check_player("Aden Flint"))
 	end
 
-
 	def test_result__win
 		@team.result("W")
 		assert_equal(3, @team.points)
 	end	
 	def test_result__draw
-		assert_equal(1, @team.result("D"))
+		@team.result("D")
+		assert_equal(1, @team.points)
 	end	
 	def test_result__loss
-		assert_equal(0, @team.result("L"))
+		@team.result("L")
+		assert_equal(0, @team.points)
 	end
-
 
 end
