@@ -51,7 +51,7 @@ class LibraryTest < MiniTest::Test
 	end
 	def test_add_new_book
 		@library.add_new_book(@new_book)
-		assert_equal(true, @books.include?(@new_book))
+		assert_equal(true, @library.books.include?(@new_book))
 	end
 	def test_change_details__book_found
 		book = @books[2]
