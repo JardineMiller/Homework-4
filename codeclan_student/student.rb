@@ -1,5 +1,5 @@
 class Student
-	attr_accessor :name, :cohort
+	attr_accessor :name, :cohort #These are my "setter" methods :)
 
 	def initialize(name, cohort)
 		@name = name
@@ -7,7 +7,7 @@ class Student
 	end
 
 	def greeting
-		return "Hi, my name is #{@name} and I am a member of E#{cohort}."
+		return "Hi, my name is #{@name} and I am a member of E#{@cohort}."
 	end
 
 	def say_favourite_language(language)
