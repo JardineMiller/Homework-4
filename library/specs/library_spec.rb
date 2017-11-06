@@ -43,10 +43,10 @@ class LibraryTest < MiniTest::Test
 		assert_equal(@books, @library.books)
 	end
 	def test_find_book
-		assert_equal(@books[2], @library.find_book("american_gods"))
+		assert_equal(@library.books[2], @library.find_book("american_gods"))
 	end
 	def test_find_details
-		details = @books[2][:rental_details]
+		details = @library.books[2][:rental_details]
 		assert_equal(details, @library.find_details("american_gods"))
 	end
 	def test_add_new_book
