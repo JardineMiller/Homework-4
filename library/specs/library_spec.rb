@@ -56,8 +56,8 @@ class LibraryTest < MiniTest::Test
 	def test_change_details__book_found
 		book = @books[2]
 		details = book[:rental_details]
-
 		@library.change_details("american_gods", "Luna", "25/12/17")
+		
 		assert_equal("american_gods", book[:title])
 		assert_equal("Luna", details[:student_name])
 		assert_equal("25/12/17", details[:date])
